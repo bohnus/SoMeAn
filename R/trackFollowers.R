@@ -43,6 +43,8 @@ saveRDS(follower, "data/follower.rds")
 
 growthRate <- (follower[2:nrow(follower),2:ncol(follower)]/follower[1:(nrow(follower)-1),2:ncol(follower)]-1)*100
 
+
+## Analysis should be updated
 plot(1,1,col="white", ylim=c(-1,15),xlim=c(1,nrow(growthRate)))
 for( i in 1:ncol(growthRate)){
   lines(growthRate[,i])
